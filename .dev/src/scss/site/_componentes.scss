@@ -88,7 +88,7 @@ input:valid + label {
 }
 
 .button {
-	padding: 10px 24px;
+	padding: 16px 24px;
 	text-transform: uppercase;
 	@include text;
 	line-height: 150%;
@@ -96,8 +96,14 @@ input:valid + label {
 	text-decoration: none;
 	color: $neutro-50;
 	@include s-border;
+	border-radius: 100px;
 	background: $cor-primaria;
 	display: inline-block;
+	transition: 0.2s all ease;
+	&:hover {
+		color: #fff;
+		background: darken($cor-primaria, 10%);
+	}
 	&.no-color {
 		background-color: transparent;
 		color: $cor-primaria;
@@ -105,11 +111,11 @@ input:valid + label {
 	&.bigger {
 		padding: 17px 24px;
 	}
-	&.border {
-		border: 1px solid #4e2251cc;
+	&.border-m {
+		border: 1px solid $cor-primaria;
 	}
 	&.opacity {
-		background-color: #4e2251cc;
+		background-color: $cor-primaria;
 	}
 	&.white {
 		color: $cor-primaria;
