@@ -63,7 +63,7 @@
 }
 .hero {
 	background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0% 35%, rgba(0, 0, 0, 0.6) 100%), url(../assets/hero.jpeg);
-	bacground-repeat: no-repeat;
+	background-repeat: no-repeat;
 	background-size: cover;
 
 	&__container {
@@ -329,6 +329,7 @@
 	}
 	&__card {
 		@include l-border;
+		border: 1px solid #f0f0f0;
 		padding: 32px;
 		@include media(s) {
 			max-width: 100%;
@@ -359,7 +360,7 @@
 			&-b {
 				@include text;
 				font-weight: bold;
-				color: $cor-primaria-clara;
+				color: $cor-primaria;
 				font-size: 24px;
 				margin-top: 24px;
 			}
@@ -528,15 +529,25 @@
 }
 .testimonials {
 	padding: 80px 0px;
+	.default__title {
+		text-align: center;
+		padding: 0px 24px;
+	}
+	.default__desc {
+		padding: 0px 24px;
+		text-align: center;
+		margin: 16px auto 48px;
+	}
 	@include media(s) {
 		padding: 60px 0px;
 	}
 	&__container {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		gap: 48px;
 		@include container;
+		margin-bottom: 48px;
+		flex-wrap: wrap;
+		justify-content: center;
 
 		@include media(s) {
 			padding: 0px 24px;
@@ -553,23 +564,51 @@
 		}
 	}
 	&__content {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 24px;
+		max-width: 433px;
 		margin-bottom: 48px;
+		@include media(s) {
+			padding: 0px 24px;
+			max-width: 350px;
+		}
 	}
 	&__card {
-		max-width: 397px;
+		max-width: 100%;
 		padding: 32px 40px;
+		height: 400px;
 		@include s-border;
 		border: 1px solid #f6f6f6;
 		@include l-shadow;
+		@include media(s) {
+			height: auto;
+		}
 		&--text {
 			@include text;
 			color: $texto-resources;
-			margin-bottom: 24px;
+			margin-bottom: 48px;
+		}
+	}
+	&__map {
+		@include media(s) {
+			iframe {
+				max-width: 100%;
+			}
+		}
+	}
+	.brands {
+		display: flex;
+		@include container;
+		gap: 48px;
+		justify-content: center;
+		margin: 48px auto;
+		flex-wrap: wrap;
+		&__card {
+			max-width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+				max-width: 200px;
+				filter: grayscale(1);
+			}
 		}
 	}
 }

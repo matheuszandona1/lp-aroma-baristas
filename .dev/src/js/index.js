@@ -14,3 +14,19 @@ $(".types__slider").slick({
 		},
 	],
 })
+$(".testimonials__content").slick({
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	prevArrow: $(".prev"),
+	nextArrow: $(".next"),
+	responsive: [
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
+})
