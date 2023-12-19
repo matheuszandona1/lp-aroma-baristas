@@ -527,6 +527,86 @@
 		font-size: 24px;
 	}
 }
+
+.contact {
+	background-color: #e6edde;
+	position: relative;
+	padding: 80px 0px 192px;
+	@include media(s) {
+		padding: 60px 0px;
+	}
+	&__container {
+		@include container;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		@include media(s) {
+			padding: 0 24px;
+		}
+		.default__title {
+			color: $neutro-50;
+			text-align: center;
+			margin: 24px 0px;
+		}
+		.default__desc {
+			color: $neutro-50;
+			text-align: center;
+			margin-bottom: 64px;
+			@include media(s) {
+				margin-bottom: 40px;
+			}
+		}
+		.tag {
+			background-color: rgba(255, 255, 255, 0.16);
+			&__text {
+				color: $neutro-50;
+			}
+		}
+	}
+	&__form {
+		width: 100%;
+		display: flex;
+		gap: 16px;
+		background-color: #fff;
+		padding: 64px;
+		flex-wrap: wrap;
+
+		@include media(s) {
+			padding: 32px;
+		}
+		.form-gap {
+			flex-wrap: wrap;
+			flex-direction: column;
+			width: 100%;
+		}
+		@include l-border;
+		input {
+			max-width: 1112px;
+			width: 100%;
+		}
+		.input-container {
+			display: flex;
+
+			gap: 16px;
+			input {
+				width: 548px;
+			}
+		}
+		.button {
+			border: none;
+			position: absolute;
+			bottom: 80px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			@include media(s) {
+				width: 100%;
+			}
+		}
+	}
+}
+
 .testimonials {
 	padding: 80px 0px;
 	.default__title {

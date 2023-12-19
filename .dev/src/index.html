@@ -1,6 +1,7 @@
 <include src="./html/header.html"></include>
 
 <body class="page--home">
+
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VF8WFF7" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<include src="./html/nav.html"></include>
@@ -393,6 +394,46 @@
 			</div>
 		</section>
 		<include src="./html/components/testimonials.html"></include>
+
+		<section class="contact">
+			<div class="contact__container">
+
+				<form action="" class="contact__form">
+					<div class="form-gap">
+						<div class="input_wrap">
+							<input type="text" required />
+							<label><img src="./assets/person.svg" alt="" /> Name</label>
+						</div>
+						<div class="input_wrap">
+							<input type="email" required />
+							<label><img src="./assets/mail.svg" alt="" /> E-mail</label>
+						</div>
+						<div class="input_wrap">
+							<input type="tel" required />
+							<label><img src="./assets/phone.svg" alt="" /> Event Location</label>
+						</div>
+
+						<div class="input-container">
+							<div class="input_wrap">
+								<input type="text" name="date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'"
+									required />
+								<label><img src="./assets/map.svg" alt="" /> Start Date </label>
+							</div>
+							<div class="input_wrap">
+								<input type="text" name="date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'"
+									required />
+								<label><img src="./assets/map.svg" alt="" /> End Date</label>
+							</div>
+
+						</div>
+					</div>
+					<div class="button--container">
+						<button type="submit" class="button">GET AN INSTANT QUOTE <i class="bi bi-arrow-right-short"></i></button>
+					</div>
+				</form>
+			</div>
+		</section>
+
 		<section class="robots">
 			<div class="robots__container">
 				<h2 class="default__title">Robots are fiddly sometimes, so in case you don't receive your quote, just get in

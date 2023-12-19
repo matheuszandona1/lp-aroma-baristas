@@ -78,7 +78,12 @@ input:valid + label {
 		outline: none;
 	}
 }
-
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+	color: transparent;
+}
+input[type="date"]:focus::-webkit-datetime-edit {
+	color: black !important;
+}
 .button__container {
 	display: flex;
 	gap: 36px;
